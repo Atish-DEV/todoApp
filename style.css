@@ -1,6 +1,7 @@
 /*style for all,html,body*/ 
 html, body {
     width: 100%;
+    height:100%;
     background-color:whitesmoke;
     color:black;
     font-size:14px;
@@ -50,33 +51,45 @@ html, body {
     background-color: orange;
   }
   .app-main{
-    padding: 10%;
+    height: 100vh;
     position: relative;
-    top:8rem;
+    background-color: rgba(201, 192, 192, 0.849);
   }
-  .app-main>.app-main-inside{
-    width:70%;
-    margin:auto;
+  .app-main > .app-main-inside{
+    width:80%;
+    position: relative;
+    top:56%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    padding: 3%;
   }
   .app-main-inside>div{
     display: flex;
     justify-content: center;
-    align-content: center;
-    flex-wrap: wrap;
+    align-items: center;
     width:100%;
   }
   .no-task-display{
     font-size: 2rem;
   }
+  .task-list-wrapper{
+    flex-direction: column;
+    max-height:400px;
+    overflow: scroll;
+    /* overflow-y: scroll; */
+  }
+  .task-list-wrapper::-webkit-scrollbar {
+    display: none;
+  }
   .single-task-item{
     display: flex;
-    margin: 2% 0;
+    margin: 6px 0;
     justify-content: space-between;
-    align-content: center;
-    flex-wrap: wrap;
-    padding: 1%;
-    width: 100%;
-    border:1px solid black;
+    align-items: center;
+    padding: 5px;
+    width: 80%;
+    background-color: wheat;
+    border:2px solid white;
     border-radius: 16px;
     position:relative;
     top:0;
@@ -89,6 +102,8 @@ html, body {
   .task-checkbox-wrapper>*{
     width: 100%;
     height:100%;
+    border: none;
+    outline: none;
   }
   .task-data-wrapper{
     width:50%;
@@ -104,9 +119,21 @@ html, body {
     width:20%;
     display: flex;
     justify-content: space-evenly;
-    align-content: center;
+    align-items: center;
     flex-wrap: wrap;
   }
+  .task-btn-wrapper button{
+    outline: none;
+    border: none;
+    color:white;
+  }
+  .task-btn-wrapper button:nth-child(odd){
+    background-color: orange;
+  }
+  .task-btn-wrapper button:nth-child(even){
+    background-color: rgb(223, 80, 80);
+  }
+
   .task-completed-style{
     background-color: grey;
   }
@@ -115,4 +142,5 @@ html, body {
   }
   .animate-remove{
     left:150px;
+    background-color: rgb(236, 27, 27);
   }

@@ -11,7 +11,10 @@ window.onload = (event) => {
     formInput.addEventListener('submit',(e)=>{
       e.preventDefault();
       //fetch data
-      const taskData=textInput.value;
+      const taskData=textInput.value.trim();
+      if(taskData.length==0){
+        return;
+      }
       //clear input Text element
       textInput.value='';
       //clear display 
@@ -73,7 +76,7 @@ window.onload = (event) => {
             taskCount--;
             taskCountDisplay.innerHTML=taskCount;
             if(taskCount==0){
-                noTaskDisplay.style.display='block';
+                noTaskDisplay.style.display='flex';
             }
           },2000);
         
