@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TodoApp-2023</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+   <link href="media.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <!--App is divided into header & main section-->
+  <!--header contain logo,input element type text & a counter-->
+ <header class="app-header">
+   <!--App header wrappper for App logo-->
+   <div class="app-header-inside">
+   <div class="app-logo-wrapper">
+     <h2>&lt;Todo App/&gt;</h2>
+   </div>
+      <!--App form wrappper for App input task-->
+   <div class="app-form-wrapper">
+     <form id="input-form">
+       <input id="text-input" type="text" placeholder="Enter task"/>
+     </form>
+   </div>
+      <!--App count wrappper track no of tasks-->
+    <div class="app-count-wrapper">
+      <div>Total task count : <span id="task-count"></span></div>
+    </div>
+   </div>
+ </header>
+  <!--App main contain the task list-->
+ <main class="app-main">
+   <div class="app-main-inside">
+   <div class="no-task-display">
+     <h2>Add task and press enter...</h2>
+   </div>
+   <div class="task-list-wrapper">
+     <!--Demo Task-->
+     <!--task item denotes a single task>
+      <div class="single-task-item">
+         checkbox wrapper wrap the checkbox
+           <div class="task-checkbox-wrapper"><input type="checkbox"/></div>
+           data wrapper wrap the task data
+           <div class="task-data-wrapper"><input type="text" value="task" readonly /></div>
+          button wrapper wrap the action button which Edit (or Save) & Delete button
+           <div class="task-btn-wrapper">
+           <button>Edit</button>
+           <button>Delete</button>
+        </div>
+     </div>
+-->
+   </div>
+   </div>
+ </main>
+  <script src="script.js"></script>
+</body>
+
+</html>
