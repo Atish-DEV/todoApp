@@ -1,0 +1,28 @@
+@media screen and (min-width:400px){
+    .app-header-inside{
+    flex-direction: column;
+  }
+   .app-header-inside>div{
+   margin:5px 0;
+ }
+  .app-logo-wrapper>h2{
+  font-size: 3rem;
+}
+}
+@media screen and (min-width:768px){
+
+}
+@media screen and (min-width:992px){
+ 
+}
+@media screen and (min-width:1200px){
+  .app-header-inside{
+    flex-direction: row;
+  }
+   .app-header-inside>div{
+   margin:0;
+ }
+  .app-logo-wrapper>h2{
+  font-size: 2.5rem;
+}
+}
