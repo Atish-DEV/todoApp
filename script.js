@@ -53,21 +53,30 @@ window.onload = (event) => {
       taskCountDisplay.innerHTML=taskCount;
       taskList.prepend(taskContainer);
       //event binding
+      //for checkbox,if click toggle task container's style
         checkBox.addEventListener('click',function(e){
             taskContainer.classList.toggle('task-completed-style');
         });
+        //event binding
+      //for edit button,if click makes the input element able to edit
       editButton.addEventListener('click',function(e){
+        //if button is Edit mode,remove the readonly attribute 
+        //and change into Save mode
            if(e.target.innerHTML=='EDIT'){
              taskItem.removeAttribute('readonly');
              taskItem.focus();
              e.target.innerHTML='SAVE';
              e.target.style.backgroundColor='green';
            }else{
+            //if button is Save mode,set the readonly attribute 
+            //and change into Edit mode
              taskItem.setAttribute('readonly','false');
              e.target.innerHTML='EDIT';
              e.target.style.backgroundColor='orange';
            }
       });
+        //event binding
+      //for Save button,if click makes save the input element content
       deleteButton.addEventListener('click',function(e){
           const task_item=e.target.parentElement.parentElement;
           task_item.classList.add('animate-remove');
