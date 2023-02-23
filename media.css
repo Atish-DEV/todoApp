@@ -1,28 +1,39 @@
-@media screen and (min-width:400px){
-    .app-header-inside{
-    flex-direction: column;
+@media screen and (max-width:1100px){
+.app-count-wrapper{
+  padding: 7px;
+}
+.app-form-wrapper{
+  width:50%;
+}
+}
+@media screen and (max-width:862px){
+  .app-header{
+    padding:0rem ;
   }
-   .app-header-inside>div{
-   margin:5px 0;
- }
-  .app-logo-wrapper>h2{
-  font-size: 3rem;
-}
-}
-@media screen and (min-width:768px){
-
-}
-@media screen and (min-width:992px){
- 
-}
-@media screen and (min-width:1200px){
   .app-header-inside{
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: space-between !important;
   }
-   .app-header-inside>div{
-   margin:0;
- }
-  .app-logo-wrapper>h2{
-  font-size: 2.5rem;
-}
+  .app-header-inside>div{
+    margin: 1%;
+  }
+  .app-main > .app-main-inside{
+    width:100%;
+  }
+  .no-task-display>h2{
+    font-size: 2.5rem;
+  }
+  .single-task-item{
+    width: 100%;
+    justify-content: space-between;
+  }
+  .task-checkbox-wrapper{
+    width: 10%;
+  }
+  .task-list-wrapper{
+    max-height: 500px;
+  }
+  .task-btn-wrapper{
+    width:30%;
+  }
 }

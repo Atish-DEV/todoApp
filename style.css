@@ -5,8 +5,9 @@ html, body {
     background-color:whitesmoke;
     color:black;
     font-size:14px;
-    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-family: sans-serif;
   }
+  
   *{
     box-sizing:border-box;
     margin:0;
@@ -14,12 +15,12 @@ html, body {
   }
   .app-header{
     padding:2.5rem;
-    border-bottom: 1px solid black;
+    border: 5px solid white;
     top:0;
     left:0;
     width:100%;
     position: fixed;
-    background-color: blanchedalmond;
+    background-color: rgba(255, 235, 205, 0.562);
     z-index: 99;
   }
   .app-header>.app-header-inside{
@@ -29,6 +30,9 @@ html, body {
     align-items: center;
     justify-content: space-between;
   }
+  .app-logo-wrapper>h1{
+    font-size: 2.4rem;
+  }
   .app-form-wrapper{
     width:60%;
   }
@@ -37,30 +41,30 @@ html, body {
     padding:10px;
     border-radius: 16px;
     outline: none;
-    border: none;
+    font-size: 1.7rem;
+    border: 5px solid white;
+    background: transparent;
   }
   .app-count-wrapper{
-    border:1px solid black;
+    border: 5px solid white;
     padding: 10px;
     border-radius: 16px;  
   }
   .app-count-wrapper span{
-    border: 1px solid black;
+    border: 3px solid white;
     padding: 3px;
     border-radius: 16px;
     background-color: orange;
   }
   .app-main{
-    height: 100vh;
-    position: relative;
+    height: 100%;
+    width:100%;
+    position: fixed;
     background-color: rgba(201, 192, 192, 0.849);
   }
   .app-main > .app-main-inside{
-    width:80%;
-    position: relative;
-    top:56%;
-    left:50%;
-    transform: translate(-50%,-50%);
+    width:100%;
+    height: 100%;
     padding: 3%;
   }
   .app-main-inside>div{
@@ -68,19 +72,25 @@ html, body {
     justify-content: center;
     align-items: center;
     width:100%;
+    margin: 20% auto;
   }
   .no-task-display{
     font-size: 2rem;
   }
+  .no-task-display>h2{
+    text-align: center;
+  }
   .task-list-wrapper{
     flex-direction: column;
-    max-height:400px;
-    overflow: scroll;
+    height:400px;
+    margin-top: 12% !important;
+    overflow: auto;
+    border: 1px solid white;
     /* overflow-y: scroll; */
   }
-  .task-list-wrapper::-webkit-scrollbar {
+  /* .task-list-wrapper::-webkit-scrollbar {
     display: none;
-  }
+  } */
   .single-task-item{
     display: flex;
     margin: 6px 0;
